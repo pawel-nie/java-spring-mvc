@@ -11,12 +11,23 @@
         Last name: <form:input path="lastName"/>
         <br><br>
         Country: <form:select path="country">
-            <form:option value="Brazil" label="Brazil" />
-            <form:option value="France" label="France" />
-            <form:option value="Germany" label="Germany" />
-            <form:option value="India" label="India" />
+            <form:options items="${student.countryOptions}" />
         </form:select>
         <br><br>
+        Favourite language:
+        Java <form:radiobutton path="favouriteLanguage" value="Java" />
+        C# <form:radiobutton path="favouriteLanguage" value="C#" />
+        Ruby <form:radiobutton path="favouriteLanguage" value="Ruby" />
+        Perl <form:radiobutton path="favouriteLanguage" value="Perl" />
+
+        <br><br>
+
+        Operating systems:
+        Linux <form:checkbox path="operatingSystems" value="Linux" />
+        Windows <form:checkbox path="operatingSystems" value="Windows" />
+        Mac <form:checkbox path="operatingSystems" value="Mac" />
+        <br><br>
+
         <input type="submit" value="Submit"/>
     </form:form>
 </body>
